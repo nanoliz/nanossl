@@ -1,0 +1,111 @@
+
+【Gitコマンド】
+
+
+◆ユーザー登録
+
+git config --global user.name "kirishima"
+git config --global user.email "kirishima@paiza.jp"
+
+
+
+◆登録情報の確認
+
+git config --list
+
+
+◆リポジトリを作成
+
+git init
+
+※mkdir などでディレクトリを作成後中へ入り上記コマンドを実行
+
+ls -a
+
+隠しディレクトリなど含め表示
+
+
+
+
+◆ステージングエリアへ
+
+git add ＜ファイル名＞
+
+※複数ファイルをステージング
+
+git add .
+
+
+14
+
+◆コミットの内容
+
+git commit -v
+
+-vを付けると変更内容などが表示される。
+
+ただし、エラー45が発生する為、以下の通り強制終了＞上書きする必要がある
+
+:w !sudo tee %
+
+:q!			
+
+:q!で上書きされるらしいけど上書きされてないっぽいので、
+git commit をやり直し、詳細を表示しないまま普通にコミットする必要があるみたい。
+
+
+
+i（vimのインサートモード
+
+
+
+概要（タイトルの様なもの
+\n
+理由（その作業をした理由
+
+
+git log
+
+
+15
+
+
+◆削除したファイルをステージング
+
+git rm ＜ファイル名＞
+※削除したことをコメントすることを忘れず
+
+
+
+◆複数ファイルをコミット
+
+git add .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+【lesson1】
+
+
+- [シェルコマンド入門編 | プログラミング学習ならpaizaラーニング]
+https://paiza.jp/works/shellcommand/primer
+
+- [Git ユーザマニュアル (バージョン 1.5.3 以降用)]
+https://img.atwikiimg.com/www8.atwiki.jp/git_jp/pub/Documentation.ja/user-manual.html
+
+- [Git ユーザマニュアル Git Quick Reference]
+https://img.atwikiimg.com/www8.atwiki.jp/git_jp/pub/Documentation.ja/user-manual.html#git-quick-start
+
+- [Git - Book]
+https://git-scm.com/book/ja/v2
