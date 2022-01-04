@@ -1,89 +1,114 @@
+﻿
+【Gitコマンド】
 
-�yGit�R�}���h�z
 
-
-�����[�U�[�o�^
+◆ユーザー登録
 
 git config --global user.name "kirishima"
 git config --global user.email "kirishima@paiza.jp"
 
 
 
-���o�^���̊m�F
+◆登録情報の確認
 
 git config --list
 
 
-�����|�W�g�����쐬
+◆リポジトリを作成
 
 git init
 
-��mkdir �ȂǂŃf�B���N�g�����쐬�㒆�֓����L�R�}���h�����s
+※mkdir などでディレクトリを作成後中へ入り上記コマンドを実行
 
 ls -a
 
-�B���f�B���N�g���ȂǊ܂ߕ\��
+隠しディレクトリなど含め表示
 
 
 
 
-���X�e�[�W���O�G���A��
+◆ステージングエリアへ
 
-git add ���t�@�C������
+git add ＜ファイル名＞
 
-�������t�@�C�����X�e�[�W���O
+※複数ファイルをステージング
 
 git add .
 
 
-14
 
-���R�~�b�g�̓��e
 
+◆コミットの内容	14
+-------------------------------
 git commit -v
 
--v��t����ƕύX���e�Ȃǂ��\�������B
+-vを付けると変更内容などが表示される。
 
-�������A�G���[45����������ׁA�ȉ��̒ʂ苭���I�����㏑������K�v������
+ただし、エラー45が発生する為、以下の通り強制終了＞上書きする必要がある
 
 :w !sudo tee %
 
 :q!			
 
-:q!�ŏ㏑�������炵�����Ǐ㏑������ĂȂ����ۂ��̂ŁA
-git commit ����蒼���A�ڍׂ�\�����Ȃ��܂ܕ��ʂɃR�~�b�g����K�v������݂����B
+:q!で上書きされるらしいけど上書きされてないっぽいので、
+git commit をやり直し、詳細を表示しないまま普通にコミットする必要があるみたい。
 
 
-
-i�ivim�̃C���T�[�g���[�h
-
+i（vimのインサートモード
 
 
-�T�v�i�^�C�g���̗l�Ȃ���
+概要（タイトルの様なもの
 \n
-���R�i���̍�Ƃ��������R
-
-
-git log
-
-
-15
-
-
-���폜�����t�@�C�����X�e�[�W���O
-
-git rm ���t�@�C������
-���폜�������Ƃ��R�����g���邱�Ƃ�Y�ꂸ
+理由（その作業をした理由
 
 
 
-�������t�@�C�����R�~�b�g
 
+
+
+◆削除したファイルをステージング	15
+-------------------------------
+git rm ＜ファイル名＞
+※削除したことをコメントすることを忘れず
+
+
+
+◆複数ファイルをコミット
+-------------------------------
 git add .
 
 
 
 
+◆git log	17
+-------------------------------
+commit [ハッシュ地]
+ハッシュ値を指定して編集したり出来る
+
+
+◇git log モードの操作方法
+
+j	下へ
+k	上へ
+q	終了
+
+
+◇オプション
+
+	--oneline	ハッシュ値＋各一行だけ表示
+
+	-n ＜n＞	コミットをn個表示
+
+	-p		何をどの様に変更したか	緑色で表示される
+
+
+※--oneline と -n とで組み合わせたり出来る
+
+　n個分を1行だけ表示
+
+
+◆差分を確認	18
+-------------------------------
 
 
 
@@ -95,16 +120,27 @@ git add .
 
 
 
-�ylesson1�z
 
 
-- [�V�F���R�}���h����� | �v���O���~���O�w�K�Ȃ�paiza���[�j���O]
+
+
+
+
+
+
+
+
+
+【lesson1】
+
+
+- [シェルコマンド入門編 | プログラミング学習ならpaizaラーニング]
 https://paiza.jp/works/shellcommand/primer
 
-- [Git ���[�U�}�j���A�� (�o�[�W���� 1.5.3 �ȍ~�p)]
+- [Git ユーザマニュアル (バージョン 1.5.3 以降用)]
 https://img.atwikiimg.com/www8.atwiki.jp/git_jp/pub/Documentation.ja/user-manual.html
 
-- [Git ���[�U�}�j���A�� Git Quick Reference]
+- [Git ユーザマニュアル Git Quick Reference]
 https://img.atwikiimg.com/www8.atwiki.jp/git_jp/pub/Documentation.ja/user-manual.html#git-quick-start
 
 - [Git - Book]
