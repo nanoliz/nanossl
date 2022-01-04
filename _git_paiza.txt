@@ -121,6 +121,13 @@ git diff HEAD	ステージとコミットの差分、ローカルとステージ
 ◆push
 -------------------------------
 
+git push
+
+
+git push origin ＜GithubのURL＞
+
+originに、＜GithubのURL＞ を登録する。
+これにより次回からのURLの入力を省略できる　origin ＝ エイリアスの様なもの
 
 
 
@@ -130,6 +137,12 @@ git diff HEAD	ステージとコミットの差分、ローカルとステージ
 
 
 
+
+【 未実習 】
+
+git branch -M master
+
+git commit -m "こみっと"	-m オプション	※霧島さんがやってた気がするのでそちらを参照すると良いかも
 
 
 
